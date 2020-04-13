@@ -9,6 +9,7 @@ import CountriesSummary from './components/CountriesSummary';
 // material-ui styling
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid'
 import Link from '@material-ui/core/Link'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
@@ -59,21 +60,21 @@ function App(props) {
     <div className="App">
       <ElevationScroll {...props}>
         <AppBar maxWidth='xl'  bgcolor='inherit' className='navbar'>
-          <Box px={4} display='flex' flexDirection='row' justifyContent='flex-end'>
-            <Box mx={4} color='inherit' flexGrow={1} textAlign='left'>
+          <Grid px={4} display='flex' flexDirection='row' justifyContent='flex-end'>
+            <Box mx={4} xs={12} md={6} color='inherit' flexGrow={1} textAlign='left'>
               <h2>COVID Tracker</h2>
             </Box>
-            <Box mx={4}>
+            <Box mx={4}xs={12} md={3}>
               <h2>
                 <Link color='inherit' href='#global-data'>Global</Link>
               </h2>
             </Box>
-            <Box mx={4}>
+            <Box mx={4}xs={12} md={3}>
               <h2>
                 <Link color='inherit' href='#countries-data'>By Country</Link>
               </h2>
             </Box>
-          </Box>
+          </Grid>
         </AppBar>
       </ElevationScroll>
       <Box my={20}>
